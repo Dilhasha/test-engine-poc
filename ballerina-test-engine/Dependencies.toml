@@ -1,0 +1,7 @@
+[[dependency]]
+org = "dilhasha"
+name = "static_test_analyzer"
+version = "0.1.0"
+repository = "local"
+
+
