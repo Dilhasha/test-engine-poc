@@ -1,4 +1,4 @@
 [package]
 org = "dilhasha"
-name = "ballerina_test_engine"
+name = "baltest"
 version = "0.1.0"

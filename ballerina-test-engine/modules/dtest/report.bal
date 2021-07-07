@@ -15,15 +15,14 @@ public class Reporter {
         if (result is error) {
             isPassed = false;
             io:println("[FAILED] " + testName);
-            io:println(result.message() + "\n");
+            io:println("\n" + result.message() + "\n");
         } else {
             isPassed = true;
-            io:println("[PASSED] " + testName + "\n");
         }
         return isPassed;
     }
 
-    public function print() {
+public function print() {
         map<future<boolean>> testReporters = {};
         int totalTestCount = 0;
         int passedTestCount = 0;

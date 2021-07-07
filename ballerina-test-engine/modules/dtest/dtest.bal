@@ -10,17 +10,26 @@ public type TFunction record {
     function () returns () test;
 };
 
+public map<TFunction[]> testSuite = {};
+
 public cache:Cache cache = new();
 
 public const string regstrar_key = "registrar";
 
 public function getRegistrar() returns Registrar|error {
-        if(cache.hasKey(regstrar_key)){
-            return  <Registrar>check cache.get(regstrar_key);            
-        }
-        Registrar registrar =  new Registrar();
+    Registrar registrar;
+    if (cache.hasKey(regstrar_key)){
+        registrar = <Registrar>check cache.get(regstrar_key);            
+    } else {
+        registrar = new Registrar();
         _ = check cache.put(regstrar_key, registrar);
-        return registrar;
+    }
+    return registrar;
+}
+
+public function registerTest(string name, function f, function[] afterTests = [], function[] beforeTests = [], function[] dependsOnTests = [], string[] groups = []) returns error? {
+    Registrar registrar = check getRegistrar();
+    registrar.register(name, f);
 }
 
 public class Registrar {

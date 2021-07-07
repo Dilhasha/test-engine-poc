@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="java11">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/target/cache/dilhasha/ballerina_test_engine/0.1.0/java11/dilhasha-ballerina_test_engine-0.1.0-testable.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/cache/dilhasha/ballerina_test_engine/0.1.0/java11/dilhasha-ballerina_test_engine-0.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/target/cache/dilhasha/ballerina_test_engine/0.1.0/java11/dilhasha-ballerina_test_engine.dtest-0.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
